@@ -1,0 +1,212 @@
+<!-- Experiment 6 Level -1  -->
+<!doctype html>
+<html>
+    <head>
+        <title>Login Form</title>
+    </head>
+    <body bgcolor="lightblue">
+        <h1 align="center">LOGIN FORM</h1>
+        <hr />
+        <form>
+            <table border="1" cellpadding="10" align="center">
+                <tr>
+                    <td>r <label for="username">Username:</label></td>
+                    <td>
+                        <input type="text" id="username" name="username" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input
+                        type="submit"
+                        value="Submit"
+                        onclick="alert('Login successful')"
+                        />
+                        <input type="reset" value="Reset" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    </html>
+    
+    
+    
+<!-- Experiment 6 Level -2  -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Presidency University - Cultural Event</title>
+
+    <style>
+      body {
+        background: skyblue;
+      }
+
+      .main {
+        width: 60%;
+        margin: 40px auto;
+        padding: 30px 40px;
+        background: rgb(47, 255, 217);
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(65, 238, 209, 0.285);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: #4b0082;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 12px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #4b0082;
+        color: white;
+        border: 0;
+        border-radius: 6px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <marquee><h1>Presidency University</h1></marquee>
+
+    <img src="pun.jpeg" align="right" width="200" height="180" />
+
+    <div class="main">
+      <h2>Fill this registration form to participate in the Cultural Fest</h2>
+
+      <form action="info.txt" method="post">
+        <label>Full name *</label>
+        <input type="text" name="fullname" placeholder="eg: kkkk" required />
+
+        <label>Student ID No.</label>
+        <input
+          type="text"
+          name="studentid"
+          placeholder="e.g. PU2025XXXX"
+          required
+        />
+
+        <label>Email *</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="name@presidency.edu"
+          required
+        />
+
+        <label>Phone *</label>
+        <input type="tel" name="phone" placeholder="+91 98XXXXXXXX" required />
+
+        <fieldset>
+          <label>DOB *</label>
+          <input type="date" name="DOB" required />
+
+          <br /><br />
+
+          Gender:
+          <input type="radio" name="gender" /> Male
+          <input type="radio" name="gender" /> Female
+        </fieldset>
+
+        <label>Department *</label>
+        <select name="department" required>
+          <option value="">-- select department --</option>
+          <option>School Of Information Science</option>
+          <option>School Of Computer Science</option>
+          <option>School of Arts & Humanities</option>
+          <option>School of Science</option>
+          <option>School of Law</option>
+          <option>School of Design</option>
+          <option>Others</option>
+        </select>
+
+        <label>Year / Programme *</label>
+        <select name="year" required>
+          <option value="">-- select --</option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>4th Year</option>
+          <option>Postgraduate</option>
+          <option>Ph.D.</option>
+        </select>
+
+        <label>Select the program you want to participate in:</label>
+
+        <label><input type="checkbox" /> Solo Dance</label>
+        <label><input type="checkbox" /> Group Dance</label>
+        <label><input type="checkbox" /> Solo Singing</label>
+        <label><input type="checkbox" /> Group Singing</label>
+        <label><input type="checkbox" /> Open Mic</label>
+        <label><input type="checkbox" /> Fashion Show</label>
+
+        <label>Role (if any)</label>
+        <input type="text" name="role" placeholder="Performer / Volunteer" />
+
+        <label>Additional details</label>
+        <textarea
+          name="notes"
+          placeholder="Any special requirements..."
+        ></textarea>
+
+        <label>Emergency contact</label>
+        <input type="tel" name="emergency" placeholder="Name - phone" />
+
+        <label>
+          <input type="checkbox" name="consent" required />
+          I confirm that the information given is correct.
+        </label>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+        <p>Registration closes: <strong>Oct 25, 2026</strong></p>
+      </form>
+    </div>
+
+    <footer>
+      Presidency University - Cultural Committee © 2025 |
+      <a href="mailto:abc@presidency.edu">abc@presidency.edu</a>
+    </footer>
+  </body>
+</html>

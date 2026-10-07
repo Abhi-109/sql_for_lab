@@ -1,0 +1,297 @@
+<!-- Expt-7 level1 -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Inline CSS Demonstration</title>
+  </head>
+  <body style="margin: 0; font-family: Arial; background: #f2f2f2">
+    <div
+      style="
+        background: #1e3a5f;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        font-size: 32px;
+        font-weight: bold;
+      "
+    >
+      Welcome to My Webpage
+    </div>
+
+    <div
+      style="
+        margin: 30px;
+        padding: 25px;
+        background: white;
+        border: 2px solid #1e3a5f;
+        border-radius: 10px;
+      "
+    >
+      <h1
+        style="
+          color: #1e3a5f;
+          text-align: center;
+          font-size: 28px;
+          text-transform: uppercase;
+        "
+      >
+        Inline Stylesheet Demonstration
+      </h1>
+
+      <p
+        style="
+          font-size: 18px;
+          line-height: 1.6;
+          text-align: justify;
+          color: #444;
+        "
+      >
+        This webpage demonstrates how different visual styles can be applied
+        directly to HTML elements using the <b>style</b> attribute. No external
+        or internal CSS stylesheet is used.
+      </p>
+
+      <h2
+        style="
+          color: #d35400;
+          border-bottom: 3px solid #d35400;
+          padding-bottom: 8px;
+        "
+      >
+        Different Text Styles
+      </h2>
+
+      <p style="color: blue; font-size: 20px">
+        This text is blue and has a larger font size.
+      </p>
+      <p style="color: green; font-weight: bold; font-style: italic">
+        This text is green, bold and italic.
+      </p>
+      <p
+        style="
+          background: #fff3cd;
+          padding: 15px;
+          border-left: 5px solid orange;
+        "
+      >
+        This paragraph demonstrates background color, padding and border.
+      </p>
+
+      <div style="text-align: center; margin-top: 30px">
+        <button
+          style="
+            background: #1e3a5f;
+            color: white;
+            padding: 12px 25px;
+            border: 0;
+            border-radius: 6px;
+            font-size: 16px;
+          "
+        >
+          Learn More
+        </button>
+
+        <button
+          style="
+            background: #d35400;
+            color: white;
+            padding: 12px 25px;
+            border: 0;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-left: 10px;
+          "
+        >
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- Expt-7 level2 -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Stylesheet Demo</title>
+    <!-- 🔹 External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- 🔹 Internal CSS -->
+    <style>
+      h2 {
+        color: purple;
+        text-align: center;
+      }
+      .internal {
+        font-size: 18px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body bgcolor="pink">
+    <!-- 🔹 Inline CSS -->
+    <h1 style="color: blue; text-align: center">Welcome to my website</h1>
+    <p style="color: green; font-size: 18px">
+      This paragraph is styled using inline CSS.
+    </p>
+    <!-- 🔹 External CSS -->
+    <h2>External CSS Example</h2>
+    <p class="external">This paragraph is styled using external CSS.</p>
+    <!-- 🔹 Internal CSS -->
+    <h2>Internal CSS Example</h2>
+    <p class="internal">This paragraph is styled using internal CSS.</p>
+    <!-- 🔹 Inline CSS -->
+    <button
+      style="
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+      "
+    >
+      Click Me
+    </button>
+  </body>
+</html>
+External css .external { color: red; font-size: 18px;
+background-color:lightyellow; padding: 10px; }
+
+
+
+
+<!-- Expt8-Level-1 -->
+<!doctype html>
+<html>
+  <head>
+    <title>Background Color using CSS</title>
+    <style>
+      body {
+        background-color: lightgray;
+        font-family: Arial;
+      }
+      h1 {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .box1 {
+        background-color: lightblue;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid blue;
+      }
+      .box2 {
+        background-color: lightgreen;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid green;
+      }
+      .box3 {
+        background-color: lightyellow;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid orange;
+      }
+      button {
+        background-color: purple;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Changing Background Colors Using CSS</h1>
+    <div class="box1">
+      <h2>Light Blue Background</h2>
+      <p>This section has a light blue background color.</p>
+    </div>
+    <div class="box2">
+      <h2>Light Green Background</h2>
+      <p>This section has a light green background color.</p>
+    </div>
+    <div class="box3">
+      <h2>Light Yellow Background</h2>
+      <p>This section has a light yellow background color.</p>
+    </div>
+    <div style="text-align: center">
+      <button>Submit</button>
+      <button>Reset</button>
+    </div>
+  </body>
+</html>
+
+
+
+
+<!-- Expt8-Level-2 -->
+<!doctype html>
+<html>
+  <head>
+    <title>Background Image using CSS</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        background-image: url("worldmap.jpeg");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+        background-position: top;
+      }
+      h1 {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .content {
+        background-color: white;
+        width: 70%;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 10px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Background Image Demonstration</h1>
+    <div class="content">
+      <h2>CSS Background Image</h2>
+      <p>This webpage demonstrates how to set a background image using CSS.</p>
+      <p>
+        The image is repeated horizontally using the
+        <b>background-repeat: repeat-x;</b> property.
+      </p>
+      <p>
+        The background image remains fixed when the webpage is scrolled using
+        the
+        <b>background-attachment: fixed;</b> property.
+      </p>
+      <p>
+        Scroll the webpage to observe that the background image remains fixed
+        while the content moves.
+      </p>
+      <p>
+        CSS provides several properties to control the appearance and position
+        of background images.
+      </p>
+      <p>
+        Background images can be repeated horizontally, vertically, in both
+        directions, or not repeated at all.
+      </p>
+      <p>
+        This is a simple Level 2 CSS exercise demonstrating background image
+        properties.
+      </p>
+    </div>
+  </body>
+</html>

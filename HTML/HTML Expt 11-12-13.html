@@ -1,0 +1,252 @@
+<!-- ============================================================
+     Experiment No. 11: Application of Bootstrap
+     Level 1: Basic Bootstrap page with a responsive fixed width container
+     ============================================================ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Fixed Width Container</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container bg-light p-5 mt-5 border">
+    <h1 class="text-primary text-center">
+      Welcome to Bootstrap
+    </h1>
+    <p class="text-center">
+      This is a basic Bootstrap page using a responsive
+      fixed-width container.
+    </p>
+    <div class="text-center">
+      <button class="btn btn-primary">
+        Click Here
+      </button>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- ============================================================
+     Experiment No. 11: Application of Bootstrap
+     Level 2: Basic Bootstrap page with Bootstrap Grid Structure
+     ============================================================ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Grid Structure</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center text-primary mt-4">
+      Bootstrap Grid Structure
+    </h1>
+    <!-- First Row -->
+    <div class="row mt-4">
+      <div class="col-md-4 bg-primary text-white p-4">
+        <h3>Column 1</h3>
+        <p>This is the first column.</p>
+      </div>
+      <div class="col-md-4 bg-success text-white p-4">
+        <h3>Column 2</h3>
+        <p>This is the second column.</p>
+      </div>
+      <div class="col-md-4 bg-warning p-4">
+        <h3>Column 3</h3>
+        <p>This is the third column.</p>
+      </div>
+    </div>
+    <!-- Second Row -->
+    <div class="row mt-4">
+      <div class="col-md-6 bg-info p-4">
+        <h3>Left Section</h3>
+        <p>This column occupies 6 out of 12 grid columns.</p>
+      </div>
+      <div class="col-md-6 bg-secondary text-white p-4">
+        <h3>Right Section</h3>
+        <p>This column occupies 6 out of 12 grid columns.</p>
+      </div>
+    </div>
+    <!-- Third Row -->
+    <div class="row mt-4">
+      <div class="col-md-3 bg-danger text-white p-4">
+        Column 1
+      </div>
+      <div class="col-md-3 bg-dark text-white p-4">
+        Column 2
+      </div>
+      <div class="col-md-3 bg-success text-white p-4">
+        Column 3
+      </div>
+      <div class="col-md-3 bg-primary text-white p-4">
+        Column 4
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- ============================================================
+     Experiment No. 12: Application of Bootstrap
+     Level 1: Image gallery page using Bootstrap Image
+     (Download six different images and store them in the folder)
+     ============================================================ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Image Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="text-center text-primary mb-4">
+      Image Gallery
+    </h1>
+    <div class="row g-4">
+      <!-- Image 1 -->
+      <div class="col-md-4">
+        <img src="rose.jpg" class="img-fluid rounded" alt="Image 1">
+      </div>
+      <!-- Image 2 -->
+      <div class="col-md-4">
+        <img src="university.webp" class="img-fluid rounded" alt="Image 2">
+      </div>
+      <!-- Image 3 -->
+      <div class="col-md-4">
+        <img src="workplace.jpg" class="img-fluid rounded" alt="Image 3">
+      </div>
+      <!-- Image 4 -->
+      <div class="col-md-4">
+        <img src="worldmap.jpeg" class="img-fluid rounded" alt="Image 4">
+      </div>
+      <!-- Image 5 -->
+      <div class="col-md-4">
+        <img src="rose.jpg" class="img-fluid rounded" alt="Image 5">
+      </div>
+      <!-- Image 6 -->
+      <div class="col-md-4">
+        <img src="workplace.jpg" class="img-fluid rounded" alt="Image 6">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- ============================================================
+     Experiment No. 12: Application of Bootstrap
+     Level 2: Create a panel with Hello World using Bootstrap
+     ============================================================ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Panel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        Hello World
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Welcome!</h4>
+        <p class="card-text">
+          Hello World! This is a simple Bootstrap panel.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- ============================================================
+     Experiment No. 13: Demonstration of JavaScript
+     Level 1: On clicking a button, display scrolling text that moves
+              from left to right with a small delay
+     ============================================================ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrolling Text</title>
+</head>
+<body>
+  <h2>Scrolling Text Example</h2>
+  <button onclick="startScrolling()">Start Scrolling</button>
+  <p id="text" style="position: absolute; left: 10px;">
+    Welcome to JavaScript Programming
+  </p>
+  <script>
+    let position = 10;
+    function startScrolling() {
+      position = 10;
+      function moveText() {
+        position = position + 5;
+        document.getElementById("text").style.left =
+          position + "px";
+        if (position < window.innerWidth - 300) {
+          setTimeout(moveText, 100);
+        }
+      }
+      moveText();
+    }
+  </script>
+</body>
+</html>
+
+
+<!-- ============================================================
+     Experiment No. 13: Demonstration of JavaScript
+     Level 2: Change the background color at frequent intervals
+     ============================================================ -->
+<html>
+  <head>
+    <script>
+      var color=["green","blue","yellow"];
+      var i=0;
+      function colorchange()
+      {
+        document.body.style.backgroundColor=color[i];
+        i=i+1;
+        if(i==3)
+          i=0;
+      }
+
+      function show()
+      {
+        var a=setInterval("colorchange()",1000);
+      }
+      function stop()
+      {
+        clearInterval(a);
+      }
+    </script>
+  </head>
+  <body>
+    We are doing JavaScript.
+    <input type="button" value="show" onclick="show()">
+    <input type="button" value="reset" onclick="stop()">
+  </body>
+</html>
+<!--
+  HOW TO FIX (reset button not working):
+  Problem: the variable "a" is declared inside show(), so stop()
+  cannot access it and clearInterval(a) fails.
+  Step 1: Declare "var a;" outside both functions, for example
+          right after "var i=0;".
+  Step 2: Inside show(), change
+            var a=setInterval("colorchange()",1000);
+          to
+            a=setInterval(colorchange,1000);
+  Now "a" is a global variable, so stop() can clear the interval.
+-->

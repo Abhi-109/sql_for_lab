@@ -1,0 +1,226 @@
+<!-- =====================================================================
+     EXPERIMENT 15 - LEVEL 2
+     Open a web page after confirming from the user, otherwise close
+     the window (confirm, open, close methods)
+     ===================================================================== -->
+<html>
+<head>
+<script type="text/javascript">
+function display()
+{
+   // confirm() returns true for OK and false for Cancel
+   var a = confirm("Do u want to continue");
+   if(a)
+     window.open("https://presidencyuniversity.in");   // OK: open the page
+   else
+     window.close();                                    // Cancel: close the window
+}
+</script>
+</head>
+<!-- display() runs as soon as the page loads -->
+<body onload="display()">
+we are doing javascript objects.
+It is easy to learn.
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 16 - LEVEL 1
+     Give access to a web page only to Presidency University students
+     (login check). Demo login: komal / 1234
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Authentication</title>
+</head>
+<body>
+<h2>User Login</h2>
+Username: <input type="text" id="username"><br><br>
+Password: <input type="password" id="password"><br><br>
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    let correctUser = "komal";   // stored valid username
+    let correctPass = "1234";    // stored valid password
+
+    if (user === correctUser && pass === correctPass) {
+        alert("Login Successful");
+        window.open("https://www.google.com", "_blank");   // allowed page
+    } else {
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 16 - LEVEL 2
+     Validate the registration page fields:
+     1. Name (alphabets only, at least 6 characters)
+     2. Password (at least 6 characters)
+     3. E-mail id (name@domain.com pattern)
+     4. Phone number (exactly 10 digits)
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+</head>
+<body>
+<h2>Registration Form Validation</h2>
+<form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    E-mail: <input type="text" id="email"><br><br>
+    Phone No: <input type="text" id="mobile"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+    let name   = document.getElementById("name").value;
+    let pass   = document.getElementById("pass").value;
+    let email  = document.getElementById("email").value;
+    let mobile = document.getElementById("mobile").value;
+
+    // 1. Name: only alphabets, length >= 6
+    if (!/^[A-Za-z]{6,}$/.test(name)) {
+        alert("Name should contain only alphabets and be at least 6 characters long");
+        return false;
+    }
+
+    // 2. Password: length >= 6
+    if (pass.length < 6) {
+        alert("Password should not be less than 6 characters");
+        return false;
+    }
+
+    // 3. E-mail: standard pattern name@domain.com
+    let emailPattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        alert("Enter a valid email address (name@domain.com)");
+        return false;
+    }
+
+    // 4. Phone number: exactly 10 digits
+    if (!/^\d{10}$/.test(mobile)) {
+        alert("Phone number must contain exactly 10 digits");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 17 - LEVEL 1
+     Show Blink text using jQuery
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blink Text using jQuery</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    function blinkText() {
+        $("#blink").fadeOut(500).fadeIn(500);   // hide then show
+    }
+    setInterval(blinkText, 1000);               // repeat every second
+});
+</script>
+</head>
+<body>
+<h2 id="blink">Welcome to jQuery</h2>
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 17 - LEVEL 2
+     Disable the right click menu in an HTML page using jQuery
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disable Right Click</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).contextmenu(function(event) {
+        event.preventDefault();   // stops the right-click menu
+    });
+});
+</script>
+</head>
+<body>
+<h2>Right Click Disabled</h2>
+<p>Try to right-click anywhere on this page.</p>
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 18 - LEVEL 1
+     Detect when a textbox's content has changed using jQuery
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detect Textbox Change</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#name").change(function() {
+        var value = $(this).val();
+        $("#result").text("Textbox content changed to: " + value);
+    });
+});
+</script>
+</head>
+<body>
+<h2>Detect Textbox Content Change</h2>
+<label>Enter your name:</label>
+<input type="text" id="name">
+<p id="result"></p>
+</body>
+</html>
+
+
+<!-- =====================================================================
+     EXPERIMENT 18 - LEVEL 2
+     Set the background-image using the jQuery CSS property
+     (flower.jpg must be in the same folder as the HTML file)
+     ===================================================================== -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Set Background Image using jQuery</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#btn").click(function() {
+        $("body").css("background-image", "url('flower.jpg')");
+        $("body").css("background-size", "cover");
+        $("body").css("background-repeat", "no-repeat");
+    });
+});
+</script>
+</head>
+<body>
+<h2>Set Background Image</h2>
+<button id="btn">Set Background Image</button>
+</body>
+</html>
